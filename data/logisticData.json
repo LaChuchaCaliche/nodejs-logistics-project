@@ -1,6 +1,28 @@
 {
-  "wareHouses": [],
-  "shippments": [],
+  "wareHouses": [
+    {
+      "id": 1,
+      "item": "Vibrator egg",
+      "quantity": "50",
+      "wareHouseId": 1
+    },
+    {
+      "id": 2,
+      "name": "Centro Warehouse",
+      "location": "131-422-233-144"
+    },
+    {
+      "id": 3,
+      "name": "Bello Warehouse",
+      "location": "531-522-533-544"
+    },
+    {
+      "id": 4,
+      "name": "Enviguetto Warehouse",
+      "location": "233-422-233-244"
+    }
+  ],
+  "shipments": [],
   "drivers": [],
   "vehicles": []
 }
