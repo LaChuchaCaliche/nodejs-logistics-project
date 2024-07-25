@@ -49,7 +49,7 @@ router.put("/:id", (req, res) => {
   const data = readData();
   const wareHouseIndex = data.wareHouses.findIndex((w) => w.id === parseInt(req.params.id));
   if (wareHouseIndex === -1) {
-    return res.status(404).json({ message: "Warehouse not found" ,wareHouse:wareHouse});
+    return res.status(404).json({ message: "Warehouse not found" });
   }
   const updateElement = {
     ...data[wareHouseIndex],
@@ -57,8 +57,8 @@ router.put("/:id", (req, res) => {
     name: req.body.name,
     location:req.body.location
   };
-  data.wareHouse[wareHouseIndex] = updateElement;
-  writeAnime(animes);
+  data.wareHouses[wareHouseIndex] = updateElement;
+  writeData(data);
   res.json({ message: "Warehouse updated correctly", Warehouse: updateElement });
 });
 
@@ -67,12 +67,12 @@ router.delete("/:id", (req, res) => {
   const data = readData();
   const deletedElement = data.wareHouses.filter((w) => w.id !== parseInt(req.params.id));
   if (data.wareHouses.length === deletedElement.length) {
-    return res.status(404).json({ message: "Warehouse not found", wareHouse:wareHouse });
+    return res.status(404).json({ message: "Warehouse not found"});
   }
 
   data.wareHouses = deletedElement
   writeData(data);
-  res.json({ message: "Warehouse deleted succesfull",wareHouse:Warehouse });
+  res.json({ message: "Warehouse deleted succesfull",wareHouse:deletedElement });
 });
 
 module.exports = router;

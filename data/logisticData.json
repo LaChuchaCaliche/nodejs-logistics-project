@@ -1,11 +1,5 @@
 {
-  "wareHouses": [
-    {
-      "id": 1,
-      "name": "San diegos warehouse",
-      "location": "111-222-333-444"
-    }
-  ],
+  "wareHouses": [],
   "shippments": [],
   "drivers": [],
   "vehicles": []
