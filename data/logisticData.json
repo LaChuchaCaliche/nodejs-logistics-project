@@ -23,6 +23,11 @@
     }
   ],
   "shipments": [],
-  "drivers": [],
+  "drivers": [
+    {
+      "id": 1,
+      "name": "La chuchita"
+    }
+  ],
   "vehicles": []
 }
