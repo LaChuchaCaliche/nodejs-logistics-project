@@ -21,7 +21,10 @@ router.post("/", (req, res) => {
   const newWareHouse = {
     id: data.wareHouses.length + 1, // simulamos un id autoincrementable
     name: req.body.name, // obtenemos el titulo de la tarea desde el cuerpo de la solicitud
-    location: req.body.location
+    location: req.body.location,
+    shipments:[],
+    drivers:[],
+    vehicles:[]
   };
   data.wareHouses.push(newWareHouse)
   writeData(data)

@@ -23,13 +23,16 @@ router.post("/", (req, res) => {
     id: data.shipments.length + 1, // simulamos un id autoincrementable
     item: req.body.item, // obtenemos el titulo de la tarea desde el cuerpo de la solicitud
     quantity: req.body.quantity,
-    wareHouseId : req.body.wareHouseId};
+    wareHouseId : req.body.wareHouseId
+  };
 
     const verifaction = data.wareHouses.find(w =>w.id === newShipment.wareHouseId);
+    
     if(!verifaction){
         throw new Error("The shipment doesnt have a correctly warehouse id")
     }
     else{
+    verifaction.shipments.push({"shipmentId":newShipment.id})
     data.shipments.push(newShipment)
     writeData(data)
     res.json({message:"Shipment added",Shipment:newShipment});}}

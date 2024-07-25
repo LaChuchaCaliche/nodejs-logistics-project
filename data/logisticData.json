@@ -2,27 +2,57 @@
   "wareHouses": [
     {
       "id": 1,
-      "item": "Vibrator egg",
-      "quantity": "50",
-      "wareHouseId": 1
+      "name": "Enviguetto Warehouse",
+      "location": "233-422-233-244",
+      "shipments": [],
+      "drivers": [],
+      "vehicles": []
     },
     {
       "id": 2,
-      "name": "Centro Warehouse",
-      "location": "131-422-233-144"
+      "name": "Bellokistan Warehouse",
+      "location": "233-422-233-244",
+      "shipments": [
+        {
+          "shipmentId": 1
+        }
+      ],
+      "drivers": [],
+      "vehicles": []
     },
     {
       "id": 3,
-      "name": "Bello Warehouse",
-      "location": "531-522-533-544"
+      "name": "The star Warehouse",
+      "location": "233-422-233-244",
+      "shipments": [],
+      "drivers": [],
+      "vehicles": []
     },
     {
       "id": 4,
-      "name": "Enviguetto Warehouse",
-      "location": "233-422-233-244"
+      "name": "Cringetagui Warehouse",
+      "location": "233-422-233-244",
+      "shipments": [],
+      "drivers": [],
+      "vehicles": []
+    },
+    {
+      "id": 5,
+      "name": "trocen Warehouse",
+      "location": "233-422-233-244",
+      "shipments": [],
+      "drivers": [],
+      "vehicles": []
     }
   ],
-  "shipments": [],
+  "shipments": [
+    {
+      "id": 1,
+      "item": "Galletas lujuriosas de traversuras",
+      "quantity": "100",
+      "wareHouseId": 2
+    }
+  ],
   "drivers": [
     {
       "id": 1,
